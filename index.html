@@ -1,0 +1,1619 @@
+<!doctype html>
+<html class="no-js" lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>EVOC – Empowering Voice of the Community</title>
+    <meta name="description"
+        content="EVOC empowers vulnerable children, youth, women, and families in Mathare and Kibera through education, livelihoods, health, and climate action.">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!--====== Favicon ======-->
+    <link rel="shortcut icon" href="assets/images/logo.png" type="image/png">
+    <link rel="icon" href="assets/images/logo.png" type="image/png">
+
+    <!--====== CSS ======-->
+    <link rel="stylesheet" href="assets/css/animate.css">
+    <link rel="stylesheet" href="assets/css/nice-select.css">
+    <link rel="stylesheet" href="assets/css/LineIcons.2.0.css">
+    <link rel="stylesheet" href="assets/css/bootstrap.4.5.2.min.css">
+    <link rel="stylesheet" href="assets/css/default.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <!--====== Custom styles for redesign ======-->
+    <style>
+        /* ---------- Brand colors ---------- */
+        :root {
+            --primary: #00a651;
+            --primary-dark: #008a44;
+            --primary-light: #e6f7ee;
+            --secondary: #2c3e50;
+            --accent: #f39c12;
+            --text-dark: #1a1a1a;
+            --text-muted: #666;
+        }
+
+        body {
+            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+        }
+
+        .main-btn {
+            background: var(--primary) !important;
+            border-color: var(--primary) !important;
+            border-radius: 30px;
+            padding: 12px 32px;
+            font-weight: 600;
+            letter-spacing: 0.3px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0, 166, 81, 0.3);
+        }
+        .main-btn:hover {
+            background: var(--primary-dark) !important;
+            border-color: var(--primary-dark) !important;
+            box-shadow: 0 6px 22px rgba(0, 166, 81, 0.45);
+            transform: translateY(-2px);
+        }
+
+        /* ---------- Dropdown nav ---------- */
+        .navbar-nav .dropdown-menu {
+            background: #fff;
+            border: none;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            padding: 0.8rem 0;
+            margin-top: 10px;
+            min-width: 220px;
+        }
+        .navbar-nav .dropdown-item {
+            padding: 0.6rem 1.8rem;
+            font-weight: 500;
+            color: #333;
+            transition: all 0.3s ease;
+        }
+        .navbar-nav .dropdown-item:hover {
+            background: var(--primary-light);
+            color: var(--primary);
+        }
+        .navbar-nav .dropdown-item i {
+            margin-right: 10px;
+            color: var(--primary);
+            width: 20px;
+        }
+        .navbar-nav .nav-link {
+            font-weight: 600;
+            padding: 0.6rem 1rem !important;
+            transition: all 0.3s ease;
+            color: #333;
+        }
+        .navbar-nav .nav-link:hover {
+            color: var(--primary) !important;
+        }
+        .navbar-nav .dropdown-toggle::after {
+            margin-left: 0.3rem;
+            vertical-align: middle;
+        }
+
+        /* ---------- Hero ---------- */
+        .slider_content h2 {
+            font-size: 3.2rem;
+            font-weight: 800;
+            line-height: 1.2;
+            color: #fff;
+            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+        }
+        .slider_content h2 span {
+            color: #00ff88;
+        }
+        .slider_content p {
+            font-size: 1.2rem;
+            opacity: 0.95;
+            color: #f0f0f0;
+            line-height: 1.7;
+        }
+
+        /* ---------- Section titles ---------- */
+        .section_title .title {
+            font-weight: 700;
+            color: var(--text-dark);
+            font-size: 2.2rem;
+            margin-bottom: 0.5rem;
+        }
+        .section_title .title span {
+            color: var(--primary);
+        }
+        .section_title p {
+            color: var(--text-muted);
+            font-size: 1.05rem;
+            line-height: 1.7;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        /* ---------- Impact Dashboard ---------- */
+        .impact-card {
+            background: #fff;
+            border-radius: 15px;
+            padding: 2rem 1rem;
+            text-align: center;
+            box-shadow: 0 5px 25px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            height: 100%;
+            border-bottom: 4px solid transparent;
+        }
+        .impact-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+            border-bottom-color: var(--primary);
+        }
+        .impact-card .icon {
+            font-size: 3rem;
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+        }
+        .impact-card .number {
+            font-size: 2.8rem;
+            font-weight: 800;
+            color: var(--secondary);
+            line-height: 1.2;
+        }
+        .impact-card .label {
+            font-size: 1rem;
+            color: #666;
+            font-weight: 500;
+            margin-top: 0.2rem;
+        }
+
+        /* ---------- Theory of Change ---------- */
+        .toc-block {
+            background: #fff;
+            border-left: 5px solid var(--primary);
+            padding: 1.5rem 2rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+            margin-bottom: 1.5rem;
+            height: 100%;
+            transition: all 0.3s ease;
+        }
+        .toc-block:hover {
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            transform: translateX(3px);
+        }
+        .toc-block h5 {
+            color: var(--secondary);
+            font-weight: 700;
+        }
+        .toc-block p {
+            margin-bottom: 0;
+            color: #555;
+        }
+
+        /* ---------- Strategic Plan ---------- */
+        .strategic-pill {
+            background: #fff;
+            padding: 1.5rem;
+            border-radius: 12px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+            border-bottom: 4px solid var(--primary);
+            height: 100%;
+            transition: all 0.3s ease;
+        }
+        .strategic-pill:hover {
+            transform: scale(1.02);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+        .strategic-pill h5 {
+            color: var(--primary);
+            font-weight: 700;
+        }
+        .strategic-pill p {
+            color: #555;
+            margin-bottom: 0;
+        }
+
+        /* ---------- Projects Gallery ---------- */
+        .project-card {
+            background: #fff;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 5px 25px rgba(0, 0, 0, 0.08);
+            transition: all 0.3s ease;
+            height: 100%;
+        }
+        .project-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
+        }
+        .project-card img {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+        }
+        .project-card .content {
+            padding: 1.5rem;
+        }
+        .project-card .content h5 {
+            font-weight: 700;
+            color: var(--secondary);
+        }
+        .project-card .content .tag {
+            display: inline-block;
+            background: var(--primary-light);
+            color: var(--primary);
+            font-size: 0.75rem;
+            font-weight: 600;
+            padding: 0.2rem 0.8rem;
+            border-radius: 20px;
+            margin-bottom: 0.5rem;
+        }
+
+        /* ---------- MEAL ---------- */
+        .meal-item {
+            background: #fff;
+            border-radius: 12px;
+            padding: 1.5rem;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+            border-left: 4px solid var(--primary);
+            margin-bottom: 1.2rem;
+            height: 100%;
+            transition: all 0.3s ease;
+        }
+        .meal-item:hover {
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        /* ---------- Donate / Volunteer boxes ---------- */
+        .donate-box,
+        .volunteer-box {
+            background: #fff;
+            border-radius: 15px;
+            padding: 2.5rem 2rem;
+            box-shadow: 0 5px 30px rgba(0, 0, 0, 0.06);
+            height: 100%;
+            transition: all 0.3s ease;
+            border-top: 4px solid var(--primary);
+        }
+        .donate-box:hover,
+        .volunteer-box:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+        }
+
+        /* ---------- Core Values card ---------- */
+        .value-card {
+            background: #fff;
+            border-radius: 12px;
+            padding: 1.8rem 1rem;
+            text-align: center;
+            box-shadow: 0 4px 18px rgba(0, 0, 0, 0.04);
+            transition: all 0.3s ease;
+            height: 100%;
+            border-bottom: 3px solid transparent;
+        }
+        .value-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+            border-bottom-color: var(--primary);
+        }
+        .value-card .value-icon {
+            font-size: 2.2rem;
+            color: var(--primary);
+            margin-bottom: 0.6rem;
+        }
+        .value-card h5 {
+            font-weight: 700;
+            color: var(--secondary);
+            font-size: 0.95rem;
+            margin-bottom: 0;
+        }
+
+        /* ---------- Philosophy / Commitment cards ---------- */
+        .phil-card {
+            background: #fff;
+            border-radius: 12px;
+            padding: 2rem;
+            box-shadow: 0 5px 25px rgba(0, 0, 0, 0.05);
+            height: 100%;
+            border-left: 5px solid var(--primary);
+            transition: all 0.3s ease;
+        }
+        .phil-card:hover {
+            box-shadow: 0 12px 35px rgba(0, 0, 0, 0.08);
+        }
+        .phil-card h4 {
+            color: var(--secondary);
+            font-weight: 700;
+        }
+        .phil-card p {
+            color: #555;
+            margin-bottom: 0;
+            font-style: italic;
+            font-size: 1.05rem;
+            line-height: 1.7;
+        }
+
+        /* ---------- Program cards ---------- */
+        .program-card {
+            background: #fff;
+            border-radius: 12px;
+            padding: 30px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+            height: 100%;
+            transition: all 0.3s ease;
+            border-top: 4px solid transparent;
+        }
+        .program-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+            border-top-color: var(--primary);
+        }
+        .program-card .prog-icon {
+            font-size: 42px;
+            color: var(--primary);
+            margin-bottom: 0.8rem;
+        }
+        .program-card h4 {
+            font-weight: 700;
+            color: var(--secondary);
+        }
+        .program-card p {
+            color: #555;
+            line-height: 1.65;
+        }
+        .program-card .impact-highlight {
+            background: var(--primary-light);
+            padding: 0.5rem 1rem;
+            border-radius: 8px;
+            font-weight: 600;
+            color: var(--primary-dark);
+            font-size: 0.9rem;
+            display: inline-block;
+            margin-top: 0.5rem;
+        }
+
+        /* ---------- Footer ---------- */
+        .footer_area {
+            background: #1a1a1a;
+        }
+        .footer_area p,
+        .footer_area .footer_title {
+            color: #ccc;
+        }
+        .footer_area .footer_title {
+            font-weight: 700;
+            color: #fff;
+            font-size: 1.1rem;
+        }
+        .footer_area .link li a {
+            color: #aaa;
+            transition: all 0.3s ease;
+        }
+        .footer_area .link li a:hover {
+            color: var(--primary);
+            padding-left: 5px;
+        }
+        .social li a {
+            background: #333;
+            color: #fff;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+            margin-right: 5px;
+        }
+        .social li a:hover {
+            background: var(--primary);
+            transform: translateY(-3px);
+        }
+
+        /* ---------- Contact info box ---------- */
+        .contact-info-box {
+            background: #fff;
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 5px 25px rgba(0, 0, 0, 0.06);
+            height: 100%;
+        }
+        .contact-info-box h4 {
+            font-weight: 700;
+            color: var(--secondary);
+        }
+        .contact-info-box ul li {
+            padding: 0.4rem 0;
+            color: #444;
+            line-height: 1.6;
+        }
+
+        /* ---------- Testimonial ---------- */
+        .single_testimonial {
+            background: #fff;
+            border-radius: 15px;
+            padding: 2rem 1.5rem;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+            height: 100%;
+            transition: all 0.3s ease;
+        }
+        .single_testimonial:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+        }
+        .testi_image img {
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid var(--primary-light);
+            margin-bottom: 1rem;
+        }
+        .testi_content p {
+            font-style: italic;
+            color: #555;
+            line-height: 1.7;
+        }
+        .testi_content h4 {
+            font-weight: 700;
+            color: var(--secondary);
+            margin-top: 0.8rem;
+            font-size: 0.95rem;
+        }
+
+        /* ---------- About section enhancements ---------- */
+        .about_content .highlight-text {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--secondary);
+            line-height: 1.7;
+        }
+
+        /* ---------- Responsive tweaks ---------- */
+        @media (max-width: 991px) {
+            .navbar-nav .dropdown-menu {
+                background: transparent;
+                box-shadow: none;
+                padding-left: 1rem;
+            }
+            .navbar-nav .dropdown-item {
+                color: #fff;
+            }
+            .navbar-nav .dropdown-item:hover {
+                background: transparent;
+                color: var(--primary);
+            }
+            .slider_content h2 {
+                font-size: 2.2rem;
+            }
+            .section_title .title {
+                font-size: 1.7rem;
+            }
+        }
+        @media (max-width: 576px) {
+            .slider_content h2 {
+                font-size: 1.7rem;
+            }
+            .slider_content p {
+                font-size: 0.95rem;
+            }
+            .impact-card .number {
+                font-size: 2rem;
+            }
+            .section_title .title {
+                font-size: 1.4rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!--[if IE]>
+    <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+    <![endif]-->
+
+    <!--====== PRELOADER ======-->
+    <div class="preloader">
+        <div class="loader">
+            <div class="ytp-spinner">
+                <div class="ytp-spinner-container">
+                    <div class="ytp-spinner-rotator">
+                        <div class="ytp-spinner-left">
+                            <div class="ytp-spinner-circle"></div>
+                        </div>
+                        <div class="ytp-spinner-right">
+                            <div class="ytp-spinner-circle"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--====== HEADER ======-->
+    <section class="header_area">
+        <div class="header_navbar">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <nav class="navbar navbar-expand-lg">
+                            <a class="navbar-brand" href="index.html">
+                                <img src="assets/images/logo.png" alt="EVOC Logo" style="max-height:50px;">
+                            </a>
+                            <button class="navbar-toggler" type="button" data-toggle="collapse"
+                                data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                                aria-expanded="false" aria-label="Toggle navigation">
+                                <span class="toggler-icon"></span>
+                                <span class="toggler-icon"></span>
+                                <span class="toggler-icon"></span>
+                            </button>
+
+                            <div class="collapse navbar-collapse sub-menu-bar" id="navbarSupportedContent">
+                                <ul id="nav" class="navbar-nav ml-auto">
+                                    <!-- Dropdown: Who We Are -->
+                                    <li class="nav-item dropdown">
+                                        <a class="nav-link dropdown-toggle" href="#" id="whoDropdown" role="button"
+                                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                            Who We Are
+                                        </a>
+                                        <div class="dropdown-menu" aria-labelledby="whoDropdown">
+                                            <a class="dropdown-item" href="#about"><i class="lni lni-book"></i> Executive
+                                                Overview</a>
+                                            <a class="dropdown-item" href="#vision-mission"><i class="lni lni-bulb"></i>
+                                                Strategic Foundation</a>
+                                            <a class="dropdown-item" href="#our-journey"><i class="lni lni-history"></i>
+                                                The EVOC Journey</a>
+                                            <a class="dropdown-item" href="#core-values-section"><i
+                                                    class="lni lni-flag"></i> Core Values</a>
+                                        </div>
+                                    </li>
+                                    <!-- Dropdown: What We Do -->
+                                    <li class="nav-item dropdown">
+                                        <a class="nav-link dropdown-toggle" href="#" id="whatDropdown" role="button"
+                                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                            What We Do
+                                        </a>
+                                        <div class="dropdown-menu" aria-labelledby="whatDropdown">
+                                            <a class="dropdown-item" href="#programs"><i class="lni lni-graduation"></i>
+                                                Education & Literacy</a>
+                                            <a class="dropdown-item" href="#programs"><i class="lni lni-briefcase"></i>
+                                                TVET & Entrepreneurship</a>
+                                            <a class="dropdown-item" href="#programs"><i class="lni lni-heart"></i> Health
+                                                & SRH</a>
+                                            <a class="dropdown-item" href="#programs"><i class="lni lni-football"></i>
+                                                Sports & Culture</a>
+                                            <a class="dropdown-item" href="#programs"><i class="lni lni-leaf"></i>
+                                                Environment & Climate</a>
+                                            <a class="dropdown-item" href="#programs"><i class="lni lni-handshake"></i>
+                                                Community Development</a>
+                                            <a class="dropdown-item" href="#programs"><i class="lni lni-woman"></i> Women
+                                                Empowerment</a>
+                                        </div>
+                                    </li>
+                                    <!-- Where We Work -->
+                                    <li class="nav-item"><a class="nav-link page-scroll" href="#where">Where We Work</a>
+                                    </li>
+                                    <!-- Our Impact -->
+                                    <li class="nav-item dropdown">
+                                        <a class="nav-link dropdown-toggle" href="#" id="impactDropdown" role="button"
+                                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                            Our Impact
+                                        </a>
+                                        <div class="dropdown-menu" aria-labelledby="impactDropdown">
+                                            <a class="dropdown-item" href="#impact-dashboard"><i
+                                                    class="lni lni-dashboard"></i> Impact Dashboard</a>
+                                            <a class="dropdown-item" href="#theory-of-change"><i
+                                                    class="lni lni-reload"></i> Theory of Change</a>
+                                            <a class="dropdown-item" href="#meal"><i class="lni lni-stats-up"></i>
+                                                MEAL</a>
+                                            <a class="dropdown-item" href="#projects"><i class="lni lni-gallery"></i>
+                                                Projects & Stories</a>
+                                        </div>
+                                    </li>
+                                    <!-- Get Involved -->
+                                    <li class="nav-item dropdown">
+                                        <a class="nav-link dropdown-toggle" href="#" id="involvedDropdown" role="button"
+                                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                            Get Involved
+                                        </a>
+                                        <div class="dropdown-menu" aria-labelledby="involvedDropdown">
+                                            <a class="dropdown-item" href="#donate"><i class="lni lni-heart-filled"></i>
+                                                Donate</a>
+                                            <a class="dropdown-item" href="#volunteer"><i class="lni lni-hand"></i>
+                                                Volunteer</a>
+                                            <a class="dropdown-item" href="#partnership"><i class="lni lni-link"></i>
+                                                Partnership</a>
+                                        </div>
+                                    </li>
+                                    <!-- Contact -->
+                                    <li class="nav-item"><a class="nav-link page-scroll" href="#contact">Contact</a></li>
+                                </ul>
+                            </div>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--====== HERO ======-->
+        <div id="home" class="header_slider">
+            <div class="single_slider bg_cover d-flex align-items-center"
+                style="background-image: url(assets/images/hero-area.jpg)">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-7 col-md-9">
+                            <div class="slider_content">
+                                <h2 class="slider_title wow fadeInLeftBig" data-wow-duration="1.3s" data-wow-delay="0.2s">
+                                    Building Livelihoods,<br><span>Empowering Communities</span></h2>
+                                <p class="wow fadeInLeftBig" data-wow-duration="1.3s" data-wow-delay="0.5s">EVOC is a
+                                    registered Community-Based Organization dedicated to fostering socio-economic
+                                    independence among marginalized children, youth, women, and families in Mathare and
+                                    Kibera.</p>
+                                <a href="#about"
+                                    class="main-btn wow fadeInLeftBig" data-wow-duration="1.3s" data-wow-delay="0.8s">Discover
+                                    Our Work</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--====== ABOUT – EXECUTIVE OVERVIEW ======-->
+    <section id="about" class="about_area pt-130 pb-130">
+        <div class="about_wrapper">
+            <div class="about_image bg_cover" style="background-image: url(assets/images/about_image.jpg)"></div>
+            <div class="container">
+                <div class="row justify-content-end">
+                    <div class="col-lg-6">
+                        <div class="about_content">
+                            <div class="section_title">
+                                <h3 class="title">Executive Overview</h3>
+                                <p class="highlight-text">EVOC serves as a strategic catalyst for development, focusing on
+                                    imparting critical skills and knowledge necessary to prepare marginalized youth and
+                                    women for formal and non-formal employment sectors.</p>
+                                <p>By bridging the gap between a lack of formal education and entry into competitive labor
+                                    markets, <strong>Empowering Voice of The Community (EVOC)</strong> acts as a partner
+                                    of choice for sustainable poverty reduction and social equity.</p>
+                                <p>Founded on the belief that sustainable development begins within communities, EVOC
+                                    works alongside local residents to address the root causes of poverty, inequality,
+                                    unemployment, and social exclusion through <strong>community-led solutions</strong>.
+                                </p>
+                                <p>Our approach combines <strong>education, economic empowerment, health promotion,
+                                        environmental sustainability, child protection, youth leadership, and community
+                                        advocacy</strong> to create lasting social and economic change. By partnering with
+                                    local leaders, schools, government institutions, private sector organizations, and
+                                    development partners, EVOC strengthens community resilience while empowering
+                                    individuals to become active agents of change within their own neighborhoods.</p>
+                            </div>
+                            <a href="#vision-mission" class="main-btn">Strategic Foundation</a>
+                        </div>
+
+                        <!-- Quick stats -->
+                        <div class="about_counter d-flex flex-wrap">
+                            <div class="single_counter counter_1 d-flex justify-content-center align-items-center wow fadeInUpBig"
+                                data-wow-duration="1.3s" data-wow-delay="0.2s">
+                                <div class="counter_wrapper">
+                                    <span class="counter">4,200+</span>
+                                    <p>People Reached</p>
+                                </div>
+                            </div>
+                            <div class="single_counter counter_2 d-flex justify-content-center align-items-center wow fadeInUpBig"
+                                data-wow-duration="1.3s" data-wow-delay="0.5s">
+                                <div class="counter_wrapper">
+                                    <span class="counter">2,150</span>
+                                    <p>Youth Trained</p>
+                                </div>
+                            </div>
+                            <div class="single_counter counter_2 d-flex justify-content-center align-items-center wow fadeInUpBig"
+                                data-wow-duration="1.3s" data-wow-delay="0.8s">
+                                <div class="counter_wrapper">
+                                    <span class="counter">1,800</span>
+                                    <p>Women Supported</p>
+                                </div>
+                            </div>
+                            <div class="single_counter counter_1 d-flex justify-content-center align-items-center wow fadeInUpBig"
+                                data-wow-duration="1.3s" data-wow-delay="1.1s">
+                                <div class="counter_wrapper">
+                                    <span class="counter">360</span>
+                                    <p>Businesses Started</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--====== STRATEGIC FOUNDATION: Vision, Mission, Philosophy, Commitment ======-->
+    <section id="vision-mission" class="services_area pt-120 pb-100" style="background:#f9f9f9;">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-10">
+                    <div class="section_title text-center pb-25">
+                        <h3 class="title">Strategic Foundation</h3>
+                        <p>The guiding principles that drive every initiative at EVOC.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-6 mb-4">
+                    <div class="phil-card">
+                        <h4><i class="lni lni-eye text-primary mr-2"></i> Our Vision</h4>
+                        <p>A thriving, inclusive, and resilient community where every child, youth, woman, and family has
+                            equal access to opportunities, quality services, and the ability to achieve their full
+                            potential and achieve long-term socio-economic self-sustainability.</p>
+                    </div>
+                </div>
+                <div class="col-lg-6 mb-4">
+                    <div class="phil-card">
+                        <h4><i class="lni lni-target text-primary mr-2"></i> Our Mission</h4>
+                        <p>To empower vulnerable communities through innovative, inclusive, and sustainable programs that
+                            improve education, livelihoods, health, environmental stewardship, and social justice while
+                            strengthening community participation and local leadership.</p>
+                    </div>
+                </div>
+                <div class="col-lg-6 mb-4">
+                    <div class="phil-card">
+                        <h4><i class="lni lni-light-bulb text-primary mr-2"></i> Our Philosophy</h4>
+                        <p>"A steadfast commitment to delivering high-impact, non-formal education, technical
+                            entrepreneurship, and hands-on skills training to cultivate individual autonomy."</p>
+                    </div>
+                </div>
+                <div class="col-lg-6 mb-4">
+                    <div class="phil-card">
+                        <h4><i class="lni lni-shield text-primary mr-2"></i> Our Commitment</h4>
+                        <p>"Ensuring that vulnerable communities embrace education as an essential baseline mechanism for
+                            structural poverty reduction, community growth, and the eradication of systemic ignorance."
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--====== CORE VALUES ======-->
+    <section id="core-values-section" class="pt-100 pb-130" style="background:#fff;">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="section_title text-center pb-25">
+                        <h3 class="title">Core Institutional Values</h3>
+                        <p>To ensure absolute programmatic integrity and operational excellence, EVOC operates under
+                            these foundational pillars.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Row 1: 6 values -->
+            <div class="row justify-content-center">
+                <div class="col-lg-2 col-md-3 col-sm-4 col-6 mb-4">
+                    <div class="value-card wow fadeInUpBig" data-wow-duration="1s" data-wow-delay="0.1s">
+                        <div class="value-icon"><i class="lni lni-checkmark-circle"></i></div>
+                        <h5>Accountability</h5>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-3 col-sm-4 col-6 mb-4">
+                    <div class="value-card wow fadeInUpBig" data-wow-duration="1s" data-wow-delay="0.2s">
+                        <div class="value-icon"><i class="lni lni-eye"></i></div>
+                        <h5>Transparency</h5>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-3 col-sm-4 col-6 mb-4">
+                    <div class="value-card wow fadeInUpBig" data-wow-duration="1s" data-wow-delay="0.3s">
+                        <div class="value-icon"><i class="lni lni-heart"></i></div>
+                        <h5>Commitment</h5>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-3 col-sm-4 col-6 mb-4">
+                    <div class="value-card wow fadeInUpBig" data-wow-duration="1s" data-wow-delay="0.4s">
+                        <div class="value-icon"><i class="lni lni-star"></i></div>
+                        <h5>Competency</h5>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-3 col-sm-4 col-6 mb-4">
+                    <div class="value-card wow fadeInUpBig" data-wow-duration="1s" data-wow-delay="0.5s">
+                        <div class="value-icon"><i class="lni lni-shield"></i></div>
+                        <h5>Integrity</h5>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-3 col-sm-4 col-6 mb-4">
+                    <div class="value-card wow fadeInUpBig" data-wow-duration="1s" data-wow-delay="0.6s">
+                        <div class="value-icon"><i class="lni lni-users"></i></div>
+                        <h5>Community Ownership</h5>
+                    </div>
+                </div>
+            </div>
+            <!-- Row 2: 4 values centered -->
+            <div class="row justify-content-center">
+                <div class="col-lg-2 col-md-3 col-sm-4 col-6 mb-4 offset-lg-1">
+                    <div class="value-card wow fadeInUpBig" data-wow-duration="1s" data-wow-delay="0.7s">
+                        <div class="value-icon"><i class="lni lni-handshake"></i></div>
+                        <h5>Equity & Inclusion</h5>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-3 col-sm-4 col-6 mb-4">
+                    <div class="value-card wow fadeInUpBig" data-wow-duration="1s" data-wow-delay="0.8s">
+                        <div class="value-icon"><i class="lni lni-light-bulb"></i></div>
+                        <h5>Innovation</h5>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-3 col-sm-4 col-6 mb-4">
+                    <div class="value-card wow fadeInUpBig" data-wow-duration="1s" data-wow-delay="0.9s">
+                        <div class="value-icon"><i class="lni lni-link"></i></div>
+                        <h5>Partnership</h5>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-3 col-sm-4 col-6 mb-4">
+                    <div class="value-card wow fadeInUpBig" data-wow-duration="1s" data-wow-delay="1.0s">
+                        <div class="value-icon"><i class="lni lni-smile"></i></div>
+                        <h5>Respect & Dignity</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--====== THE EVOC JOURNEY ======-->
+    <section id="our-journey" class="pt-120 pb-130" style="background:#f9f9f9;">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="section_title text-center pb-25">
+                        <h3 class="title">The EVOC Journey</h3>
+                        <p>From community consultations to lasting transformation.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-6 mb-4">
+                    <div class="bg-white p-4 rounded shadow-sm" style="height:100%;">
+                        <h4 class="text-primary"><i class="lni lni-history mr-2"></i> Context & Institutional Origins
+                        </h4>
+                        <p>EVOC was established in <strong>2018</strong> following rigorous, localized field assessments
+                            within Nairobi's informal settlements, initially launching interventions within Mathare and
+                            Kibera — two of Nairobi's largest informal settlements where many households face
+                            interconnected challenges including unemployment, inadequate housing, limited access to
+                            healthcare and education, poor sanitation, and economic vulnerability.</p>
+                        <p>The organization's founders identified a <strong>critical service gap</strong> regarding
+                            targeted socio-economic support structures for marginalized youth and women. Our interventions
+                            are designed in partnership with community members to address locally identified priorities
+                            and strengthen long-term resilience.</p>
+                    </div>
+                </div>
+                <div class="col-lg-6 mb-4">
+                    <div class="bg-white p-4 rounded shadow-sm" style="height:100%;">
+                        <h4 class="text-primary"><i class="lni lni-cog mr-2"></i> Methodology & Execution</h4>
+                        <p>Rather than deploying top-down solutions, EVOC explicitly develops programs built on
+                            <strong>strict problem identification, community prioritization, and demand-driven
+                                needs</strong>.</p>
+                        <p>Today, the organization is anchored by a highly skilled, professional team explicitly focused
+                            on expanding community capacity, reducing vulnerability, and cultivating active participants
+                            in local economic ecosystems. We believe lasting change happens when communities lead their
+                            own development.</p>
+                        <p>By partnering with local leaders, schools, government institutions, private sector
+                            organizations, and development partners, EVOC continues to build opportunities that enable
+                            vulnerable households to move from <strong>dependency toward dignity, self-reliance, and
+                                sustainable livelihoods</strong>.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--====== PROGRAMS (What We Do) ======-->
+    <section id="programs" class="destination_area pt-130 pb-130">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="section_title text-center pb-25">
+                        <h3 class="title">Core Programmatic Pillars</h3>
+                        <p>EVOC deploys a multi-sectoral approach to community development, structured into distinct,
+                            high-impact programs.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <!-- Pillar 1: Basic Education & Adult Literacy -->
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="program-card wow fadeInUpBig" data-wow-duration="1.3s" data-wow-delay="0.2s">
+                        <div class="prog-icon"><i class="lni lni-book"></i></div>
+                        <h4 class="title">Basic Education & Adult Literacy</h4>
+                        <p><strong>Focus:</strong> Engaging illiterate and semi-literate youth and women in structured
+                            literacy tracks. Equips beneficiaries with functional knowledge to upgrade standard of living
+                            benchmarks and build parity with wider society.</p>
+                        <p>We support children and young people through educational assistance, mentorship, life skills
+                            development, digital literacy, reading programs, and safe learning environments that improve
+                            school attendance, retention, and academic success.</p>
+                        <span class="impact-highlight">📌 86 learners graduated; increased school retention</span>
+                    </div>
+                </div>
+                <!-- Pillar 2: TVET & Entrepreneurship -->
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="program-card wow fadeInUpBig" data-wow-duration="1.3s" data-wow-delay="0.4s">
+                        <div class="prog-icon"><i class="lni lni-briefcase"></i></div>
+                        <h4 class="title">TVET & Entrepreneurship (TIVET)</h4>
+                        <p><strong>Focus:</strong> Providing market-driven technical skills and foundational
+                            entrepreneurship toolkits. Directly bridges the gap between low formal educational attainment
+                            and successful labor market entry.</p>
+                        <p>We equip young people with employability skills, entrepreneurship training, leadership
+                            development, vocational education, digital skills, and mentorship to improve access to
+                            meaningful employment and self-employment opportunities.</p>
+                        <span class="impact-highlight">📌 210 trainees completed; over 60% employed or self-employed</span>
+                    </div>
+                </div>
+                <!-- Pillar 3: Health & SRH -->
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="program-card wow fadeInUpBig" data-wow-duration="1.3s" data-wow-delay="0.6s">
+                        <div class="prog-icon"><i class="lni lni-heart"></i></div>
+                        <h4 class="title">Sexual Reproductive Health (SRH)</h4>
+                        <p><strong>Focus:</strong> Delivering targeted awareness campaigns, behavioral modification
+                            training, and public health education. Minimizes high-risk behavior patterns, scales down
+                            transmission networks, and mitigates morbidity/mortality rates linked to HIV/AIDS.</p>
+                        <p>We promote access to quality healthcare, mental health awareness, sexual and reproductive
+                            health education, nutrition, hygiene, and disease prevention to improve community wellbeing.
+                        </p>
+                        <span class="impact-highlight">📌 500+ youth reached; increased health literacy</span>
+                    </div>
+                </div>
+                <!-- Pillar 4: Sports & Culture -->
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="program-card wow fadeInUpBig" data-wow-duration="1.3s" data-wow-delay="0.8s">
+                        <div class="prog-icon"><i class="lni lni-football"></i></div>
+                        <h4 class="title">Sports & Culture</h4>
+                        <p><strong>Focus:</strong> Nurturing raw creative and athletic talents while intentionally
+                            addressing underlying socio-behavioral trends. Serves as an effective, preventative diversion
+                            program to drastically lower crime and combat drug and substance abuse.</p>
+                        <p>Harnessing sports and creative arts for youth empowerment, social cohesion, leadership
+                            development, and violence prevention.</p>
+                        <span class="impact-highlight">📌 12 community teams formed; reduced youth crime</span>
+                    </div>
+                </div>
+                <!-- Pillar 5: Environment & Climate -->
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="program-card wow fadeInUpBig" data-wow-duration="1.3s" data-wow-delay="1.0s">
+                        <div class="prog-icon"><i class="lni lni-leaf"></i></div>
+                        <h4 class="title">Environmental Conservation & Climate Action</h4>
+                        <p><strong>Focus:</strong> Strengthening community resilience through waste management, urban
+                            greening, tree planting, recycling, and environmental education. We work with communities to
+                            improve waste management, promote recycling, urban greening, environmental education,
+                            clean-up campaigns, and climate resilience initiatives that create healthier neighborhoods.
+                        </p>
+                        <span class="impact-highlight">📌 3,500 trees planted; cleaner neighborhoods</span>
+                    </div>
+                </div>
+                <!-- Pillar 6: Community Development & Social Protection -->
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="program-card wow fadeInUpBig" data-wow-duration="1.3s" data-wow-delay="1.2s">
+                        <div class="prog-icon"><i class="lni lni-handshake"></i></div>
+                        <h4 class="title">Community Development & Social Protection</h4>
+                        <p><strong>Focus:</strong> Strengthening community systems, child protection, peacebuilding,
+                            advocacy, and social support for vulnerable households. We strengthen local governance, child
+                            protection systems, community participation, peacebuilding, and advocacy while supporting
+                            vulnerable households through targeted social interventions.</p>
+                        <span class="impact-highlight">📌 Strengthened local governance & protection systems</span>
+                    </div>
+                </div>
+                <!-- Pillar 7: Women's Economic Empowerment -->
+                <div class="col-lg-4 col-md-6 mb-4 offset-lg-2">
+                    <div class="program-card wow fadeInUpBig" data-wow-duration="1.3s" data-wow-delay="1.4s">
+                        <div class="prog-icon"><i class="lni lni-woman"></i></div>
+                        <h4 class="title">Women's Economic Empowerment</h4>
+                        <p><strong>Focus:</strong> Increasing women's economic participation through savings groups,
+                            financial literacy, enterprise development, and leadership. EVOC strengthens women's economic
+                            resilience through savings groups, financial literacy, business development support,
+                            vocational skills, and income-generating initiatives that increase household incomes and
+                            financial independence.</p>
+                        <span class="impact-highlight">📌 1,800 women supported; increased household incomes</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--====== WHERE WE WORK ======-->
+    <section id="where" class="services_area pt-120 pb-130" style="background:#f9f9f9;">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="section_title text-center pb-25">
+                        <h3 class="title">Where We Work</h3>
+                        <p>EVOC primarily serves communities in Mathare and Kibera, two of Nairobi's largest informal
+                            settlements, where vulnerable households face interconnected challenges.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-6 mb-4">
+                    <div class="bg-white p-4 rounded shadow-sm" style="height:100%;">
+                        <h4 class="text-primary"><i class="lni lni-map-marker mr-2"></i> Mathare</h4>
+                        <p>Our interventions in Mathare focus on education, youth skills training, health awareness, and
+                            environmental clean-ups. We work with local schools, youth groups, and women's networks to
+                            address high unemployment, poor sanitation, and limited access to services.</p>
+                        <p><strong>Key projects:</strong> Literacy classes, TVET training, SRH workshops, sports leagues,
+                            and tree planting.</p>
+                    </div>
+                </div>
+                <div class="col-lg-6 mb-4">
+                    <div class="bg-white p-4 rounded shadow-sm" style="height:100%;">
+                        <h4 class="text-primary"><i class="lni lni-map-marker mr-2"></i> Kibera</h4>
+                        <p>In Kibera, EVOC implements comprehensive community development programmes targeting women,
+                            youth, and children. Our work includes adult literacy, entrepreneurship, health outreach,
+                            child protection, and community governance.</p>
+                        <p><strong>Key projects:</strong> Women's savings groups, vocational training, mental health
+                            support, and community advocacy.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--====== IMPACT DASHBOARD ======-->
+    <section id="impact-dashboard" class="pt-120 pb-130" style="background:#fff;">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="section_title text-center pb-25">
+                        <h3 class="title">Our Impact Dashboard</h3>
+                        <p>Measurable results from our community-driven programmes.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="impact-card">
+                        <div class="icon"><i class="lni lni-users"></i></div>
+                        <div class="number">4,200+</div>
+                        <div class="label">People Reached</div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="impact-card">
+                        <div class="icon"><i class="lni lni-graduation"></i></div>
+                        <div class="number">2,150</div>
+                        <div class="label">Youth Trained</div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="impact-card">
+                        <div class="icon"><i class="lni lni-woman"></i></div>
+                        <div class="number">1,800</div>
+                        <div class="label">Women Supported</div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="impact-card">
+                        <div class="icon"><i class="lni lni-tree"></i></div>
+                        <div class="number">3,500</div>
+                        <div class="label">Trees Planted</div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="impact-card">
+                        <div class="icon"><i class="lni lni-briefcase"></i></div>
+                        <div class="number">360</div>
+                        <div class="label">Businesses Started</div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="impact-card">
+                        <div class="icon"><i class="lni lni-star"></i></div>
+                        <div class="number">120</div>
+                        <div class="label">Scholarships Awarded</div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="impact-card">
+                        <div class="icon"><i class="lni lni-heart"></i></div>
+                        <div class="number">86</div>
+                        <div class="label">Literacy Graduates</div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="impact-card">
+                        <div class="icon"><i class="lni lni-community"></i></div>
+                        <div class="number">12</div>
+                        <div class="label">Community Teams Formed</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--====== THEORY OF CHANGE ======-->
+    <section id="theory-of-change" class="pt-120 pb-130" style="background:#f9f9f9;">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="section_title text-center pb-25">
+                        <h3 class="title">Theory of Change</h3>
+                        <p>How EVOC creates lasting change in communities.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-4 mb-4">
+                    <div class="toc-block">
+                        <h5><i class="lni lni-flag text-primary"></i> Inputs</h5>
+                        <p>Community needs assessments, trained staff, partnerships, funding, local leadership
+                            engagement, and evidence-based programme design.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 mb-4">
+                    <div class="toc-block">
+                        <h5><i class="lni lni-cog text-primary"></i> Activities</h5>
+                        <p>Literacy classes, vocational training, health workshops, sports leagues, tree planting,
+                            advocacy, savings groups, and mentorship.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 mb-4">
+                    <div class="toc-block">
+                        <h5><i class="lni lni-graph text-primary"></i> Outputs</h5>
+                        <p>Number of learners trained, businesses started, trees planted, health sessions held, community
+                            groups formed, and policies influenced.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 mb-4">
+                    <div class="toc-block">
+                        <h5><i class="lni lni-arrow-up text-primary"></i> Outcomes</h5>
+                        <p>Improved literacy, increased employability, better health practices, stronger social cohesion,
+                            enhanced environmental stewardship, and women's empowerment.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 mb-4">
+                    <div class="toc-block">
+                        <h5><i class="lni lni-target text-primary"></i> Impact</h5>
+                        <p>Resilient communities with reduced poverty, gender equality, improved wellbeing, sustainable
+                            livelihoods, and active citizen participation.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 mb-4">
+                    <div class="toc-block">
+                        <h5><i class="lni lni-ambulance text-primary"></i> Assumptions</h5>
+                        <p>Community ownership, inclusive participation, local capacity, supportive policy environment,
+                            and sustained partnerships.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--====== STRATEGIC PLAN 2026-2030 ======-->
+    <section id="strategic-plan" class="pt-120 pb-130" style="background:#fff;">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="section_title text-center pb-25">
+                        <h3 class="title">Strategic Plan <span>2026–2030</span></h3>
+                        <p>Our roadmap for sustainable community transformation.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="strategic-pill">
+                        <h5><i class="lni lni-graduation"></i> Education & Youth</h5>
+                        <p>Increase literacy rates by 40%, expand TVET enrollment by 50%, and strengthen school retention
+                            programmes.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="strategic-pill">
+                        <h5><i class="lni lni-woman"></i> Women Empowerment</h5>
+                        <p>Reach 3,000 women with economic empowerment initiatives and double the number of women-owned
+                            businesses.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="strategic-pill">
+                        <h5><i class="lni lni-heart"></i> Health & Wellbeing</h5>
+                        <p>Expand SRH and mental health services to 10,000 community members, reduce HIV prevalence
+                            through awareness.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="strategic-pill">
+                        <h5><i class="lni lni-leaf"></i> Environment</h5>
+                        <p>Plant 10,000 trees, establish community recycling centres, and mainstream climate resilience in
+                            all programmes.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="strategic-pill">
+                        <h5><i class="lni lni-handshake"></i> Partnerships</h5>
+                        <p>Build strategic alliances with 20+ institutional donors, government agencies, and private
+                            sector partners.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="strategic-pill">
+                        <h5><i class="lni lni-stats-up"></i> MEAL</h5>
+                        <p>Strengthen M&E systems, enhance data-driven decision-making, and ensure accountability and
+                            learning.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--====== PROJECTS & SUCCESS STORIES ======-->
+    <section id="projects" class="pt-120 pb-130" style="background:#f9f9f9;">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="section_title text-center pb-25">
+                        <h3 class="title">Projects & Success Stories</h3>
+                        <p>Real change, real lives – see our work in action.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="project-card">
+                        <img src="assets/images/blog-1.jpg" alt="Literacy graduation">
+                        <div class="content">
+                            <span class="tag">Education</span>
+                            <h5>82 Adults Graduate from Literacy Program</h5>
+                            <p>A record number of learners – mostly women – completed 9 months of basic literacy,
+                                numeracy, and financial skills training. The ceremony was attended by community leaders
+                                and local officials.</p>
+                            <a href="#" class="text-primary font-weight-bold">Read more →</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="project-card">
+                        <img src="assets/images/blog-2.jpg" alt="Tailoring business">
+                        <div class="content">
+                            <span class="tag">Livelihoods</span>
+                            <h5>From Unemployed to Business Owner: Mary's Story</h5>
+                            <p>After EVOC's tailoring training, Mary started her own shop employing two other youth. Her
+                                business now serves the entire community and has inspired other women.</p>
+                            <a href="#" class="text-primary font-weight-bold">Read more →</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="project-card">
+                        <img src="assets/images/blog-3.jpg" alt="Health outreach">
+                        <div class="content">
+                            <span class="tag">Health</span>
+                            <h5>500+ Youth Reached in SRH Awareness Drive</h5>
+                            <p>Community outreach on HIV prevention, family planning, and menstrual hygiene recorded
+                                overwhelming participation and positive feedback from attendees.</p>
+                            <a href="#" class="text-primary font-weight-bold">Read more →</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--====== MEAL ======-->
+    <section id="meal" class="pt-120 pb-130" style="background:#fff;">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="section_title text-center pb-25">
+                        <h3 class="title">Monitoring, Evaluation, Accountability & Learning (MEAL)</h3>
+                        <p>We are committed to evidence-based programming, transparency, and continuous improvement.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-6 mb-3">
+                    <div class="meal-item">
+                        <h5><i class="lni lni-dashboard text-primary"></i> Monitoring</h5>
+                        <p>Regular data collection and tracking of programme activities, outputs, and outcomes using
+                            digital tools and community feedback.</p>
+                    </div>
+                </div>
+                <div class="col-lg-6 mb-3">
+                    <div class="meal-item">
+                        <h5><i class="lni lni-stats-up text-primary"></i> Evaluation</h5>
+                        <p>Conducting baseline, mid-term, and end-line evaluations to measure impact, effectiveness, and
+                            sustainability of interventions.</p>
+                    </div>
+                </div>
+                <div class="col-lg-6 mb-3">
+                    <div class="meal-item">
+                        <h5><i class="lni lni-handshake text-primary"></i> Accountability</h5>
+                        <p>Ensuring transparency and responsiveness to communities, donors, and partners through regular
+                            reporting and feedback mechanisms.</p>
+                    </div>
+                </div>
+                <div class="col-lg-6 mb-3">
+                    <div class="meal-item">
+                        <h5><i class="lni lni-light-bulb text-primary"></i> Learning</h5>
+                        <p>Using data and lessons learned to adapt programmes, improve quality, and share best practices
+                            with stakeholders.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--====== TESTIMONIALS ======-->
+    <section id="testimonial" class="testimonial_area pt-120 pb-130" style="background:#f9f9f9;">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-6">
+                    <div class="section_title text-center pb-25">
+                        <h3 class="title">Community Voices</h3>
+                        <p>Real stories from the people we serve.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-4 mb-4">
+                    <div class="single_testimonial text-center">
+                        <div class="testi_image"><img src="assets/images/placeholder.jpg" alt="testimonial"></div>
+                        <div class="testi_content">
+                            <p>"I never learned to read or write, but EVOC's literacy class gave me confidence. Now I can
+                                help my children with homework and even read my own business receipts."</p>
+                            <h4>– Jane M., Kibera</h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 mb-4">
+                    <div class="single_testimonial text-center">
+                        <div class="testi_image"><img src="assets/images/placeholder.jpg" alt="testimonial"></div>
+                        <div class="testi_content">
+                            <p>"After EVOC's tailoring training, I started my own shop. I now employ two other young
+                                women from my neighbourhood. EVOC gave me the skills and the confidence."</p>
+                            <h4>– Mary O., Kibera</h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 mb-4">
+                    <div class="single_testimonial text-center">
+                        <div class="testi_image"><img src="assets/images/placeholder.jpg" alt="testimonial"></div>
+                        <div class="testi_content">
+                            <p>"The sports program kept me off the streets. I now play football and mentor younger kids
+                                in my community. EVOC changed my life direction."</p>
+                            <h4>– Kevin A., Mathare</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--====== DONATE, VOLUNTEER & PARTNERSHIP ======-->
+    <section id="donate-volunteer" class="pt-120 pb-130" style="background:#fff;">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="section_title text-center pb-25">
+                        <h3 class="title">Get Involved</h3>
+                        <p>Your support fuels our mission. Join us in transforming lives.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-6 mb-4" id="donate">
+                    <div class="donate-box">
+                        <div class="text-center">
+                            <i class="lni lni-heart-filled" style="font-size:3rem; color:#00a651;"></i>
+                            <h4 class="mt-3">Donate</h4>
+                            <p>Your donation directly funds literacy classes, vocational kits, SRH workshops, sports
+                                programmes, and environmental initiatives in Mathare and Kibera.</p>
+                            <a href="#contact" class="main-btn mt-3">Donate Now</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 mb-4" id="volunteer">
+                    <div class="volunteer-box">
+                        <div class="text-center">
+                            <i class="lni lni-hand" style="font-size:3rem; color:#00a651;"></i>
+                            <h4 class="mt-3">Volunteer</h4>
+                            <p>Share your skills and time with our community programmes. Whether you're a teacher, health
+                                worker, sports coach, or IT expert, we need you.</p>
+                            <a href="#contact" class="main-btn mt-3">Become a Volunteer</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row mt-4">
+                <div class="col-lg-12 text-center" id="partnership">
+                    <div class="bg-white p-5 rounded shadow-sm">
+                        <i class="lni lni-link" style="font-size:3rem; color:#00a651;"></i>
+                        <h4 class="mt-3">Partner With Us</h4>
+                        <p>EVOC welcomes strategic alliances, corporate sponsorships, and grant partnerships to help scale
+                            our verified community models. We welcome partnerships with development agencies,
+                            philanthropic organizations, government, corporate partners, and civil society.</p>
+                        <a href="#contact" class="main-btn mt-3">Become a Partner</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--====== CONTACT ======-->
+    <section id="contact" class="contact_area pt-120 pb-130" style="background:#f9f9f9;">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-6">
+                    <div class="section_title text-center pb-25">
+                        <h3 class="title">Get in Touch</h3>
+                        <p>Reach out to volunteer, donate, partner, or ask a question. We'd love to hear from you.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-8 mb-4">
+                    <div class="contact_form">
+                        <form action="assets/contact.php" method="POST" id="contact-form">
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <div class="single_form"><input type="text" name="name" placeholder="Full Name"
+                                            required></div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="single_form"><input type="text" name="phone" placeholder="Phone Number">
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="single_form"><input type="email" name="email" placeholder="Email Address"
+                                            required></div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="single_form">
+                                        <select name="interest" required>
+                                            <option value="0" disabled selected>I'm interested in...</option>
+                                            <option value="volunteer">Volunteering</option>
+                                            <option value="donate">Donating</option>
+                                            <option value="partner">Partnering</option>
+                                            <option value="program">Joining a program</option>
+                                            <option value="other">Other</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-lg-12">
+                                    <div class="single_form"><textarea name="message" placeholder="Your Message"
+                                            rows="5"></textarea></div>
+                                </div>
+                                <div class="col-lg-12">
+                                    <div class="single_form"><button type="submit" class="main-btn">Send
+                                            Message</button></div>
+                                </div>
+                            </div>
+                            <p class="form-message pt-30"></p>
+                        </form>
+                    </div>
+                </div>
+                <div class="col-lg-4 mb-4">
+                    <div class="contact-info-box">
+                        <h4 class="title">Contact Information</h4>
+                        <ul class="list-unstyled mt-3">
+                            <li><strong><i class="lni lni-map-marker text-primary mr-2"></i> Head Office:</strong><br>
+                                Nine Planets Apartments, 3rd Floor,<br>Suite Jupiter 8, Kabarnet Road,<br>Off Ngong
+                                Road, Nairobi, Kenya</li>
+                            <li class="mt-3"><strong><i class="lni lni-phone text-primary mr-2"></i> Primary
+                                    Hotlines:</strong><br>+254 720 549 925<br>+254 723 599 305</li>
+                            <li class="mt-3"><strong><i class="lni lni-envelope text-primary mr-2"></i> Official
+                                    Emails:</strong><br>info@evoc.co.ke<br>evoc.org@gmail.com</li>
+                            <li class="mt-3"><strong><i class="lni lni-post-box text-primary mr-2"></i> Postal
+                                    Directory:</strong><br>P.O. Box 280-00517,<br>Nairobi, Kenya</li>
+                            <li class="mt-3"><strong><i class="lni lni-world text-primary mr-2"></i> Web
+                                    Portal:</strong><br>www.evoc.co.ke</li>
+                        </ul>
+                        <!-- Social links -->
+                        <div class="mt-4">
+                            <a href="#" class="btn btn-outline-primary btn-sm mr-2"><i
+                                    class="lni lni-facebook-original"></i></a>
+                            <a href="#" class="btn btn-outline-primary btn-sm mr-2"><i
+                                    class="lni lni-twitter-original"></i></a>
+                            <a href="#" class="btn btn-outline-primary btn-sm mr-2"><i
+                                    class="lni lni-instagram-original"></i></a>
+                            <a href="#" class="btn btn-outline-primary btn-sm mr-2"><i
+                                    class="lni lni-linkedin-original"></i></a>
+                            <a href="#" class="btn btn-outline-primary btn-sm"><i class="lni lni-youtube"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--====== FOOTER ======-->
+    <section id="footer" class="footer_area">
+        <div class="footer_widget pt-80 pb-130">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-4 col-md-6 order-md-1 order-lg-1">
+                        <div class="footer_about mt-50">
+                            <a href="index.html">
+                                <img src="assets/images/logo.png" alt="EVOC Logo"
+                                    style="max-width: 150px; width: 100%; height: auto;">
+                            </a>
+                            <p>EVOC – Empowering Voice of the Community. Building resilient communities in Mathare and
+                                Kibera through education, livelihoods, health, and climate action since 2018.</p>
+                            <ul class="social">
+                                <li><a class="social_1" href="#"><i class="lni lni-facebook-original"></i></a></li>
+                                <li><a class="social_2" href="#"><i class="lni lni-twitter-original"></i></a></li>
+                                <li><a class="social_3" href="#"><i class="lni lni-instagram-original"></i></a></li>
+                                <li><a class="social_4" href="#"><i class="lni lni-linkedin-original"></i></a></li>
+                                <li><a class="social_5" href="#"><i class="lni lni-youtube"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-12 order-md-3 order-lg-2">
+                        <div class="footer_link_wrapper d-flex flex-wrap">
+                            <div class="footer_link mt-45">
+                                <h4 class="footer_title">Quick Links</h4>
+                                <ul class="link">
+                                    <li><a href="#home">Home</a></li>
+                                    <li><a href="#about">About</a></li>
+                                    <li><a href="#programs">Programs</a></li>
+                                    <li><a href="#impact-dashboard">Impact</a></li>
+                                    <li><a href="#contact">Contact</a></li>
+                                </ul>
+                            </div>
+                            <div class="footer_link mt-45">
+                                <h4 class="footer_title">Get Involved</h4>
+                                <ul class="link">
+                                    <li><a href="#donate">Donate</a></li>
+                                    <li><a href="#volunteer">Volunteer</a></li>
+                                    <li><a href="#partnership">Partnership</a></li>
+                                    <li><a href="#contact">Contact Us</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 order-md-2 order-lg-3">
+                        <div class="footer_subscribe mt-45">
+                            <h4 class="footer_title">Subscribe</h4>
+                            <p>Get updates on our programs and success stories.</p>
+                            <div class="subscribe_form">
+                                <form action="#">
+                                    <input type="email" placeholder="Your email">
+                                    <button><i class="lni lni-arrow-right"></i></button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row mt-5">
+                    <div class="col-lg-12 text-center">
+                        <p style="color:#888; font-size:0.9rem;">&copy; 2025 EVOC – Empowering Voice of the Community.
+                            All rights reserved. | Building Livelihoods, Empowering Communities.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--====== BACK TO TOP ======-->
+    <a href="#" class="back-to-top"><i class="lni lni-chevron-up"></i></a>
+
+    <!--====== JAVASCRIPT ======-->
+    <script src="assets/js/vendor/jquery-1.12.4.min.js"></script>
+    <script src="assets/js/vendor/modernizr-3.7.1.min.js"></script>
+    <script src="assets/js/popper.min.js"></script>
+    <script src="assets/js/bootstrap.4.5.2.min.js"></script>
+    <script src="assets/js/jquery.easing.min.js"></script>
+    <script src="assets/js/scrolling-nav.js"></script>
+    <script src="assets/js/waypoints.min.js"></script>
+    <script src="assets/js/jquery.counterup.min.js"></script>
+    <script src="assets/js/jquery.nice-select.min.js"></script>
+    <script src="assets/js/wow.min.js"></script>
+    <script src="assets/js/main.js"></script>
+    <!-- Custom script for dropdowns on mobile -->
+    <script>
+        $(document).ready(function () {
+            // Enable dropdown toggling on click for mobile
+            $('.dropdown-toggle').on('click', function (e) {
+                var $el = $(this);
+                var $parent = $el.closest('.dropdown');
+                var $menu = $parent.find('.dropdown-menu');
+                $menu.toggleClass('show');
+                $parent.toggleClass('show');
+                e.preventDefault();
+                e.stopPropagation();
+            });
+        });
+    </script>
+</body>
+
+</html>
